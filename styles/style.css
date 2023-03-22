@@ -1,0 +1,29 @@
+body{
+    margin: 3% 7%;
+    padding: 0px;
+    
+}
+.navbar{
+    
+    background-color: #ffff;
+    
+}
+
+.navbrand{
+    display: inline-block;
+}
+ 
+.mainnav{
+    display: inline-block;
+}
+
+.mainnav__ul-listItem{
+    display: inline-block;
+    margin: 3%;
+}
+
+.mainnav__link{
+    text-decoration: none;
+    color: black;
+    
+}
