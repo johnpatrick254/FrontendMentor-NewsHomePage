@@ -5,22 +5,28 @@ body{
 }
 .navbar{
     
-    background-color: #ffff;
+    background-color: #ffffff;
     
 }
 
 .navbrand{
     display: inline-block;
+
+
 }
  
 .mainnav{
-    display: inline-block;
+   margin: 2.5%;
+display: inline-block;   
+
 }
 
 .mainnav__ul-listItem{
-    display: inline-block;
-    margin: 3%;
+   display: inline-block;
+   
+    
 }
+
 
 .mainnav__link{
     text-decoration: none;
