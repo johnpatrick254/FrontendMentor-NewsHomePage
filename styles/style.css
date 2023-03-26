@@ -1,27 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 body{
-    margin: 3% 7%;
+    margin: 4% 14%;
     padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter';
     
 }
 .navbar{
     
     background-color: #ffff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     
 }
-
-.navbrand{
-    display: inline-block;
+.mainnav__ul{
+    display: flex;
+    list-style: none;
+    gap: 1.7rem;
 }
- 
-.mainnav{
-    display: inline-block;
-}
-
 .mainnav__ul-listItem{
-    display: inline-block;
-    margin: 3%;
-}
 
+    vertical-align: bottom;
+}
 .mainnav__link{
     text-decoration: none;
     color: black;
