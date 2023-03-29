@@ -21,12 +21,14 @@ body {
 }
 
 .container {
-    margin: 2% 12%;
+    margin: 2% 14%;
   height: 100%;
-  padding: 0;
+  padding: 0; 
+  
+  
 }
 .navbar {
-  display: flex;
+  display: flex;  
   flex-flow: row nowrap;
   justify-content: space-between;
 }
@@ -59,25 +61,22 @@ body {
 #home {
   display: grid;
   margin-top: 3%;
-  grid-template-columns: 2fr 1fr;
   gap: 10px ;
-  grid-auto-flow: 400px;
   grid-template-areas:
-    "Main-img" "Main-img" "News"
-    "Main" "Main" "News"
-    "Links" "Links" "Links";
+    "Main-img Main-img News"
+    "Main-img Main-img News"
+    "Links Links Links";
 }
 
 .home-content img{
     width:100%;
-    grid-area: Main-img;
     height: 14.5rem;
     margin-bottom: 10px;
 }
 
 .home-content {
-    width:100%;
-    height: 100%;
+    grid-area: Main-img;
+    height: max-content;
 }
 .home-content__text{
     display: flex;
@@ -111,19 +110,20 @@ body {
 font-size: 15px;
 width: 75%;
 margin-top: 0;
+
 }
 #content-text a{
-    line-height: 1.4rem;
-    width: 70%;
-    margin-top: 1%;
-    margin-bottom: 4%;
-    height: 28%;
-    width: 38%;
+    width: fit-content;
+    height: 45px;
     background-color: var(--soft-red);
     color: var(--Off-white);
     text-decoration: none;
     text-align: center;
-    padding: 0.6rem;
+    padding: 10px;
+}
+#content-text a h3{
+    letter-spacing: 4px;
+
 }
 
 #content-text a:hover{
@@ -138,11 +138,9 @@ background-color: var(--Very-dark-blue);
 .homepage-news{
     background-color: var(--Very-dark-blue);
     color: var(--Off-white);
-    width: 100%;
-    height: 100%;
     justify-content: start;
-    height: fit-content;
-    grid-template-columns: News;
+    grid-area: News;
+    height: max-content;
 
 }
 
@@ -178,11 +176,10 @@ background-color: var(--Very-dark-blue);
 .homepage-bottom{
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     gap:10px;
     margin-top: 2%;
-    grid-column-end: span 2;
-    width: 100%;
+    grid-area: Links;
 }
 .bottom-page__item-content{
     display: flex;
@@ -234,6 +231,10 @@ background-color: var(--Very-dark-blue);
          margin:0;  
          padding: 0;
          box-sizing: border-box;       
+        }
+
+        .attribution{
+            display: none;
         }
 
     .container{
