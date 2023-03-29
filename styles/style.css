@@ -37,13 +37,12 @@ body {
     display: none;
 }
 
+
 .mainnav__ul {
   display: flex;
-  align-self: flex-end;
   list-style: none;
   gap: 1.9rem;
   position: relative;
-  right: 6rem;
   top: 1.5rem;
 }
 
@@ -61,53 +60,61 @@ body {
   display: grid;
   margin-top: 3%;
   grid-template-columns: 2fr 1fr;
-  gap: 0px ;
+  gap: 10px ;
   grid-auto-flow: 400px;
   grid-template-areas:
-    "Main News"
-    "Links .";
+    "Main-img" "Main-img" "News"
+    "Main" "Main" "News"
+    "Links" "Links" "Links";
 }
 
 .home-content img{
     width:100%;
-    height: 16rem;
+    grid-area: Main-img;
+    height: 14.5rem;
     margin-bottom: 10px;
 }
 
 .home-content {
-    width:97%;
+    width:100%;
+    height: 100%;
 }
 .home-content__text{
     display: flex;
     justify-content: space-between;
     height: fit-content;
+    grid-area: Main;
+    gap:1.7rem;
     
 }
 
 .content-title h1{
     font-weight:800 ;
     font-size: 2.7rem;
-    width: 15rem;
+}
+.content-title{
+    flex:1;
+    min-width:40%;
+    min-height: fit-content;
+
 }
 
 #content-text{
-    width: fit-content;
     display: flex;
     flex-flow: column nowrap;
     gap: 10px;
     justify-content:flex-end ;
     position: relative;
+    flex:2;
 }
 #content-text p{
 font-size: 15px;
 width: 75%;
-margin-left: 24%;
 margin-top: 0;
 }
 #content-text a{
     line-height: 1.4rem;
     width: 70%;
-    margin-left: 24%;
     margin-top: 1%;
     margin-bottom: 4%;
     height: 28%;
@@ -131,9 +138,11 @@ background-color: var(--Very-dark-blue);
 .homepage-news{
     background-color: var(--Very-dark-blue);
     color: var(--Off-white);
-    width: 82%;
+    width: 100%;
+    height: 100%;
     justify-content: start;
     height: fit-content;
+    grid-template-columns: News;
 
 }
 
@@ -170,30 +179,34 @@ background-color: var(--Very-dark-blue);
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    width: fit-content;
-    min-width: 175px;
-    grid-column-end: span 2;
+    gap:10px;
     margin-top: 2%;
+    grid-column-end: span 2;
+    width: 100%;
 }
+.bottom-page__item-content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 70%;
+}
+
 .homepage-bottom img{
     height: 90%;
-    width: 26%;
+    width: 30%;
     float: left;
-    margin-right: 4%;
+    margin-right: 2.5%;
 }
 .homepage-bottom p{
-    width: 67%;
     float: left;
     font-size: 15px;
     color: var(--Dark-grayish-blue);
 }
 .homepage-bottom h1{
-    width: 45%;
     float: left;
     color: var(--Grayish-blue);
 }
 .homepage-bottom h2{
-    max-width: fit-content;
     float: left;
     font-size: 1rem;
     margin-top:2% ;
@@ -251,11 +264,13 @@ background-color: var(--Very-dark-blue);
         z-index: 15;
 
         width: 3rem;
-        height: 1.9rem;
+        height: 100%;
         vertical-align: bottom;
         display: flex;
         justify-content: center;
+        align-items: center;
         position: relative;
+        align-self: bottom ;
     }
     
     #hamburger img{
@@ -301,6 +316,12 @@ background-color: var(--Very-dark-blue);
         margin: 1%;
     }
     #modal{
+        display: flex;
+        opacity: 0;
+        display: flex;
+        opacity: 0;
+        transition: all 400ms ease-in-out ;
+
         flex-direction: column;
         align-content: flex-end ;
         position: fixed;
@@ -310,23 +331,38 @@ background-color: var(--Very-dark-blue);
         margin-bottom: 1000x;
         padding: 0;
         z-index: 2;
+        
+        
         background-color: rgba(0, 0, 0, 0.192);
     }
     #menu{
-        width:50%;
+        width:0;
         height: 100%;
+        position: relative;
+        right: 0%;
+        position: relative;
+        right: 0%;
         display:inherit;
         flex-direction: column;
         align-items: flex-end;
         align-self: flex-end;
+        text-decoration: none; 
+        text-decoration: none; 
+        transition: all 400ms ease-in-out;
         background-color: white;
-        transition: transform 2.5s linear ;
+    }
+    #menu.active{
+     width: 50%;
+    }
+
+    #close{
+        display: none;
     }
 
     #modal ul{
       position: relative;
       display: inherit;
-      top: 9rem;
+      top: 10rem;
       left: 2rem;
       width: fit-content;
       display: flex;
@@ -336,11 +372,6 @@ background-color: var(--Very-dark-blue);
       text-decoration: none;
       justify-content: space-between;
       align-self: flex-start;
-    }
-    #modal-link{
-      display: flex;
-      flex-direction: column;
-      text-decoration: none; 
     }
     #modal a{
         text-decoration: none; 
