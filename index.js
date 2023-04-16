@@ -2,26 +2,33 @@
    const close = document.getElementById("close");
     const modal =document.getElementById("modal");
     const menu = document.getElementById("menu");
+    const body = document.querySelector("body");
 
 
 button.addEventListener("click", ()=>{
     setTimeout(()=>{
         modal.style.opacity ="1"
-             menu.classList.add("active")
-         button.style.display="none";
-         close.style.display ="flex"
-         
-             
-         },0)
-    })
+        menu.classList.add("active")
+        button.style.display="none";
+        close.style.display ="flex"
+        modal.style.display ="flex"
+        body.style.overflow ="hidden"
+        
+        
+    },10)
+})
 
-    close.addEventListener("click", ()=>{
-        menu.classList.remove("active")
+close.addEventListener("click", ()=>{
+    
+    setTimeout(()=>{
         modal.style.opacity ="0"
-         setTimeout(()=>{
-            button.style.display="flex";
+        menu.classList.remove("active")
+        button.style.display="flex";
             close.style.display ="none"
+            body.style.overflow ="auto"
+            modal.style.display ="none"
+
              
-         },0)
+         },10)
     })
 

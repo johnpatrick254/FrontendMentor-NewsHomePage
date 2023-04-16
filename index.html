@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <div id="modal">
+     <div id="modal">
       <div id="menu">
         <ul >
           <li>
@@ -30,94 +30,109 @@
         </ul>
 
       </div>
-    </div>
+    </div> 
     <div id="container">
-      
-      <nav class="navbar">
-        <div class="navbrand">
-          <a href="" class="navbrand__link">
-            <img
-              src="./assets/images/logo.svg"
-              class="navbrand__link-image"
-              alt="logText" />
-          </a>
-        </div>
-        <div class="mainnav">
-          <ul class="mainnav__ul">
-            <li class="mainnav__ul-listItem">
-              <a href="" class="mainnav__link"> Home </a>
-            </li>
-            <li class="mainnav__ul-listItem">
-              <a href="" class="mainnav__link">New</a>
-            </li>
-            <li class="mainnav__ul-listItem">
-              <a href="" class="mainnav__link"> Popular </a>
-            </li>
-            <li class="mainnav__ul-listItem">
-              <a href="" class="mainnav__link"> Trending </a>
-            </li>
-            <li class="mainnav__ul-listItem">
-              <a href="" class="mainnav__link"> Categories </a>
-            </li>
-          </ul>
+      <nav id="navbar">
+        <div class="nav">
+          <div class="navbrand">
+            <a href="" class="navbrand__link">
+              <img
+                src="./assets/images/logo.svg"
+                class="navbrand__link-image"
+                alt="logText" />
+            </a>
+          </div>
+          <div class="mainnav">
+            <ul class="mainnav__ul">
+              <li class="mainnav__ul-listItem">
+                <a href="" class="mainnav__link"> Home </a>
+              </li>
+              <li class="mainnav__ul-listItem">
+                <a href="" class="mainnav__link">New</a>
+              </li>
+              <li class="mainnav__ul-listItem">
+                <a href="" class="mainnav__link"> Popular </a>
+              </li>
+              <li class="mainnav__ul-listItem">
+                <a href="" class="mainnav__link"> Trending </a>
+              </li>
+              <li class="mainnav__ul-listItem">
+                <a href="" class="mainnav__link"> Categories </a>
+              </li>
+            </ul>
+   
+          </div>
           <div id="hamburger">
             <img id= "button" src="./assets/images/icon-menu.svg" alt="">
             <img id= "close" src="./assets/images/icon-menu-close.svg" alt="">
           </div>
         </div>
       </nav>
+
       <section id="home">
         <div class="home-content">
           <div class="home-content__img-div">
-            <img
-              class="home-content__img"
-              src="./assets/images/image-web-3-desktop.jpg"
-              alt="" />
+            <picture>
+              <source media="(600px)" srcset="./assets/images/image-web-3-mobile.jpg">
+              <img src="./assets/images/image-web-3-desktop.jpg" alt="" />
+            </picture>
           </div>
           <div class="home-content__text">
-         <div class="content-title"> <h1>The Bright Future of Web 3.0?</h1></div>
-         <div class="content-text"> <p>
-            We dive into the next evolution of the web that claims to put the
-            power of the platforms back into the hands of the people. But is it
-            really fulfilling its promise?
-          </p>
-          <a href="">READ MORE</a></div>
-        </div>
+            <div class="content-title">
+              <h1>The Bright Future of Web 3.0?</h1>
+            </div>
+            <div class="content-text">
+              <p>
+                We dive into the next evolution of the web that claims to put
+                the power of the platforms back into the hands of the people.
+                But is it really fulfilling its promise?
+              </p>
+              <a href="">READ MORE</a>
+            </div>
+          </div>
         </div>
         <div class="homepage-news">
-          <h1>New</h1>
-          <div class="homepage-news__item">
-            <h2>Hydrogen VS Electric Cars</h2>
-            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
-            <hr>
-
-          </div>
-          <div class="homepage-news__item">
-            <h2>The Downsides of AI Artistry</h2>
-            <p>
-              What are the possible adverse effects of on-demand AI image
-              generation?
-            </p>
-            <hr>
-          </div>
-          <div class="homepage-news__item">
-            <h2>Is VC Funding Drying Up?</h2>
-            <p>
-              Private funding by VC firms is down 50% YOY. We take a look at
-              what that means.
-            </p>
+          <div class="news">
+            <h1>New</h1>
+            <div class="homepage-news__item">
+              <h2>Hydrogen VS Electric Cars</h2>
+              <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+              <hr />
+            </div>
+            <div class="homepage-news__item">
+              <h2>The Downsides of AI Artistry</h2>
+              <p>
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+              <hr />
+            </div>
+            <div class="homepage-news__item">
+              <h2>Is VC Funding Drying Up?</h2>
+              <p>
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="homepage-bottom">
+      </section>
+      <section id="trending">
+        <div class="bottom-page">
           <div class="bottom-page__item">
-            <img src="./assets/images/image-retro-pcs.jpg" alt="" />
-            
-            <div class="bottom-page__item-content"><h1>01</h1>
+            <div class="trending-img">
+              <img src="./assets/images/image-retro-pcs.jpg" alt="" />
+            </div>
+            <div class="bottom-page__item-content">
+              <h1>01</h1>
               <h2>Reviving Retro PCs</h2>
-              <p>What happens when old PCs are given modern upgrades?</p></div>
+              <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
           </div>
           <div class="bottom-page__item">
-            <img src="./assets/images/image-top-laptops.jpg" alt="" />
+            <div class="trending-img">
+              <img src="./assets/images/image-top-laptops.jpg" alt="" />
+            </div>
 
             <div class="bottom-page__item-content">
               <h1>02</h1>
@@ -126,7 +141,9 @@
             </div>
           </div>
           <div class="bottom-page__item">
-            <img  src="./assets/images/image-gaming-growth.jpg" alt="" />
+            <div class="trending-img">
+              <img src="./assets/images/image-gaming-growth.jpg" alt="" />
+            </div>
             <div class="bottom-page__item-content">
               <h1>03</h1>
               <h2>The Growth of Gaming</h2>
@@ -135,8 +152,6 @@
           </div>
         </div>
       </section>
-
-     
     </div>
     <script src="index.js"></script>
   </body>
