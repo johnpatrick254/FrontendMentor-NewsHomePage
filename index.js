@@ -11,8 +11,9 @@ button.addEventListener("click", ()=>{
         menu.classList.add("active")
         button.style.display="none";
         close.style.display ="flex"
-        modal.style.display ="flex"
+        // modal.style.display ="flex"
         body.style.overflow ="hidden"
+        modal.style.visibility ="visible"
         
         
     },10)
@@ -24,9 +25,10 @@ close.addEventListener("click", ()=>{
         modal.style.opacity ="0"
         menu.classList.remove("active")
         button.style.display="flex";
-            close.style.display ="none"
-            body.style.overflow ="auto"
-            modal.style.display ="none"
+        close.style.display ="none"
+        body.style.overflow ="auto"
+        modal.style.visibility ="hidden"
+           
 
              
          },10)
